@@ -1,0 +1,13 @@
+<section id="todos">
+  <header>
+    <h2><%= @todo_list[:name] %></h2>
+    <ul>
+      <li><a class="edit" href="/lists/<%= params[:idx] %>/edit">Edit List</a></li>
+    </ul> 
+  </header>
+</section>
+
+<% content_for :header_links do %>
+  <a href="/lists"> All Lists </a>
+<% end %>
+

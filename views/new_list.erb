@@ -1,9 +1,3 @@
-<% if session[:failure] %>
-  <div class="flash error">
-  <p><%= session.delete(:failure)%></p>
-  </div>
-<% end %>
-
 <form action="/lists" method="post">
   <dl>
     <dt>
@@ -18,3 +12,7 @@
     <a href="/lists">Cancel</a>
   </fieldset>
 </form>
+
+<% content_for :header_links do %>
+  <a href="/lists"> All Lists </a>
+<% end %>
